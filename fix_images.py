@@ -1,18 +1,16 @@
 #!/usr/bin/env python3
 """
-Corrige toutes les images cassées ou en doublon via l'API Pexels.
-Lance une fois manuellement depuis GitHub Actions.
+Remplace TOUTES les images de TOUS les articles via Pexels.
 """
 import os, re, json, urllib.request, urllib.parse
 
 PEXELS_KEY = os.environ.get('PEXELS_API_KEY', '')
-DEFAULT_PATTERN = r'https://images\.unsplash\.com/photo-1509440159596-0249088772ff[^"\']*'
 
 FALLBACK = {
-    'recettes': 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80',
-    'sante':    'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=1200&q=80',
-    'farines':  'https://images.unsplash.com/photo-1612200606649-1e95b16fcf2c?w=1200&q=80',
-    'guides':   'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=1200&q=80',
+    'recettes': 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=1200',
+    'sante':    'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=1200',
+    'farines':  'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=1200',
+    'guides':   'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?w=1200',
 }
 
 def get_pexels_image(titre, cat):
@@ -24,8 +22,8 @@ def get_pexels_image(titre, cat):
         if data.get('photos'):
             return data['photos'][0]['src']['large2x']
     except Exception as e:
-        print(f'  ⚠️ Pexels: {e}')
-    return FALLBACK.get(cat, FALLBACK['recettes'])
+        print(f'  Pexels erreur: {e}')
+    return FALLBACK.get(cat)
 
 count = 0
 for cat in ['recettes', 'sante', 'farines', 'guides']:
@@ -36,19 +34,37 @@ for cat in ['recettes', 'sante', 'farines', 'guides']:
             continue
         path = f'{cat}/{f}'
         html = open(path).read()
-        if not re.search(DEFAULT_PATTERN, html):
-            continue
+        
         # Extraire le titre
         tm = re.search(r'<title>(.*?) — Le Club', html)
         titre = tm.group(1) if tm else f.replace('-', ' ').replace('.html', '')
-        # Chercher une image Pexels
+        
+        # Chercher image Pexels
         new_img = get_pexels_image(titre, cat)
-        # Remplacer toutes les occurrences
-        html = re.sub(DEFAULT_PATTERN, new_img, html)
-        html = re.sub(r'(<meta property="og:image" content=")[^"]+(")', rf'\g<1>{new_img}\g<2>', html)
-        html = re.sub(r'("image":")[^"]+(")', rf'\g<1>{new_img}\g<2>', html)
+        
+        # Remplacer l'image hero
+        html = re.sub(
+            r'(<img class="article-hero"[^>]+src=")[^"]+(")',
+            rf'\g<1>{new_img}\g<2>',
+            html
+        )
+        # Remplacer og:image
+        html = re.sub(
+            r'(<meta property="og:image" content=")[^"]+(")',
+            rf'\g<1>{new_img}\g<2>',
+            html
+        )
+        # Remplacer dans schema
+        html = re.sub(
+            r'("image":")[^"]+(")',
+            rf'\g<1>{new_img}\g<2>',
+            html
+        )
+        
         open(path, 'w').write(html)
         count += 1
         print(f'✅ {cat}/{f.replace(".html","")} → {new_img[:60]}...')
 
-print(f'\n✅ {count} articles corrigés')
+print(f'\n✅ {count} articles mis à jour avec images Pexels')
+Terminé
+Sur GitHub :
