@@ -212,7 +212,8 @@ function filterHome(cat,btn){
 window.addEventListener('scroll',function(){
   var s=window.scrollY;
   document.getElementById('backToTop').style.display=s>400?'flex':'none';
-  document.getElementById('stickyCta').style.display=s>600?'flex':'none';
+  var cta=document.getElementById('stickyCta');
+  if(s>600){cta.classList.add('visible');}else{cta.classList.remove('visible');}
 });
 </script>
 <div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a1a;color:#fff;padding:1rem 1.5rem;z-index:9999;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-family:var(--sans);font-size:.875rem">
