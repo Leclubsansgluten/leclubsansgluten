@@ -72,40 +72,23 @@
     <h2 class="section-title">🍞 Recettes du moment</h2>
     <a class="section-link" href="/recettes/">Tout voir →</a>
   </div>
-  <div class="subcats">
-    <button class="subcat active" onclick="filterHome('toutes',this)">🍽️ Toutes</button>
-    <button class="subcat" onclick="filterHome('pain',this)">🍞 Pain</button>
-    <button class="subcat" onclick="filterHome('gateaux',this)">🎂 Gâteaux</button>
-    <button class="subcat" onclick="filterHome('crepes',this)">🥞 Crêpes</button>
-    <button class="subcat" onclick="filterHome('plats',this)">🍽️ Plats</button>
-    <button class="subcat" onclick="filterHome('soupes',this)">🍲 Soupes</button>
-  </div>
-  <div class="articles-grid" id="recettesGrid">
-<a href="/recettes/tarte-tatin-pommes-sans-gluten.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1568571780765-9276ac8b75a2?w=800&q=80" alt="Tarte tatin aux pommes sans gluten : la recette parfaite" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Tarte tatin aux pommes sans gluten : la recette parfaite</div></div></a>
-<a href="/recettes/tarte-citron-meringuee-sans-gluten.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=800&q=80" alt="Tarte au citron meringuée sans gluten : recette légère" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Tarte au citron meringuée sans gluten : recette légère</div></div></a>
-<a href="/recettes/soupe-veloute-courge-sans-gluten.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?w=800&q=80" alt="Velouté de courge butternut sans gluten crémeux" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Velouté de courge butternut sans gluten crémeux</div></div></a>
-<a href="/recettes/soupe-minestrone-sans-gluten.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80" alt="Minestrone sans gluten complet et nourrissant" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Minestrone sans gluten complet et nourrissant</div></div></a>
-<a href="/recettes/quiche-lorraine-sans-gluten.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1559650656-5d1d361ad10e?w=800&q=80" alt="Quiche lorraine sans gluten : la recette inratable" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Quiche lorraine sans gluten : la recette inratable</div></div></a>
-<a href="/recettes/pizza-sans-gluten-base-croustillante.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80" alt="Pizza sans gluten : la base croustillante qui change tout" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Pizza sans gluten : la base croustillante qui change tout</div></div></a>
-  </div>
+  <div class="thematic-nav" id="thematicNav">
+  <button class="thematic-btn active" onclick="filterThematic('all',this)"><span class="th-icon">🍽️</span>Toutes</button>
+  <button class="thematic-btn" onclick="filterThematic('rapide',this)"><span class="th-icon">🚀</span>Rapide</button>
+  <button class="thematic-btn" onclick="filterThematic('pdej',this)"><span class="th-icon">🥐</span>Petit déj</button>
+  <button class="thematic-btn" onclick="filterThematic('entrees',this)"><span class="th-icon">🥗</span>Entrées</button>
+  <button class="thematic-btn" onclick="filterThematic('plats',this)"><span class="th-icon">🍽️</span>Plats</button>
+  <button class="thematic-btn" onclick="filterThematic('desserts',this)"><span class="th-icon">🎂</span>Desserts</button>
+  <button class="thematic-btn" onclick="filterThematic('pain',this)"><span class="th-icon">🍞</span>Pain</button>
 </div>
 <script>
-function filterHome(cat,btn){
-  document.querySelectorAll('.subcats .subcat').forEach(function(b){b.classList.remove('active')});
+function filterThematic(cat, btn) {
+  document.querySelectorAll('#thematicNav .thematic-btn').forEach(function(b){b.classList.remove('active')});
   btn.classList.add('active');
-  document.querySelectorAll('#recettesGrid .card').forEach(function(c){
-    var href=c.getAttribute('href')||'';
-    var title=c.querySelector('.card-title');
-    var text=(href+' '+(title?title.textContent:'')).toLowerCase();
-    var show=cat==='toutes';
-    if(!show){
-      if(cat==='pain'&&/pain|baguette|mie|brioche|chataigne/.test(text))show=true;
-      if(cat==='gateaux'&&/gateau|cake|brownie|cookie|muffin|tarte|citron|tatin|dessert/.test(text))show=true;
-      if(cat==='crepes'&&/crepe|galette|pancake|sarrasin/.test(text))show=true;
-      if(cat==='plats'&&/lasagne|quiche|pizza|plat|gratin/.test(text))show=true;
-      if(cat==='soupes'&&/soupe|veloute|minestrone|bouillon/.test(text))show=true;
-    }
-    c.style.display=show?'':'none';
+  document.querySelectorAll('.articles-grid .card').forEach(function(c){
+    if(cat === 'all'){ c.style.display = ''; return; }
+    var th = c.getAttribute('data-thematique') || '';
+    c.style.display = (th === cat) ? '' : 'none';
   });
 }
 </script>
