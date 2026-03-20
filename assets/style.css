@@ -1,352 +1,232 @@
-/* ═══════════════════════════════════════════
-   LE CLUB SANS GLUTEN — CSS COMPLET v2
-   Niveau Marmiton / 750g
-═══════════════════════════════════════════ */
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Le Club Sans Gluten — Recettes et conseils sans gluten N°1 en France</title>
+<meta name="description" content="Recettes sans gluten testées, conseils santé, comparatifs de farines. Rejoins 100 000 femmes qui vivent sans gluten sans se priver."/>
+<link rel="canonical" href="https://leclubsansgluten.com/"/>
+<meta property="og:title" content="Le Club Sans Gluten — Recettes et conseils sans gluten N°1 en France"/>
+<meta property="og:description" content="Recettes sans gluten testées, conseils santé, comparatifs de farines. Rejoins 100 000 femmes qui vivent sans gluten sans se priver."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://leclubsansgluten.com/"/>
+<meta property="og:image" content="https://leclubsansgluten.com/assets/bible.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/assets/style.css"/>
+</head>
+<body>
 
-:root {
-  --gold: #C9A84C;
-  --gold-dark: #A8873A;
-  --ink: #1A1510;
-  --warm: #FAF6F0;
-  --white: #FFFFFF;
-  --border: #E8DDD0;
-  --gray: #7A6E64;
-  --gray-light: #F5F0EB;
-  --shadow-sm: 0 1px 4px rgba(0,0,0,.06);
-  --shadow-md: 0 4px 16px rgba(0,0,0,.1);
-  --shadow-lg: 0 8px 32px rgba(0,0,0,.14);
-  --radius: 8px;
-  --radius-lg: 12px;
+<div class="top-bar">📚 <a href="https://www.whynottraining.fr/ed790464" target="_blank">La Bible des Farines Sans Gluten</a> — Maîtrise les farines sans gluten facilement → <a href="https://www.whynottraining.fr/ed790464" target="_blank">Je le veux</a></div>
+
+<header class="site-header">
+  <a href="/" class="logo-wrap">
+    <div class="logo">Le Club<em> Sans Gluten</em></div>
+    <span class="logo-sub">Le site info sans gluten N°1</span>
+  </a>
+  <div class="header-search-wrap">
+    <input type="text" class="header-search" placeholder="🔍 Rechercher..." id="headerSearch" autocomplete="off"/>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</header>
+
+<nav class="site-nav"><div class="site-nav-inner"><a href="/recettes/">🍞 Recettes</a><a href="/sante/">🌿 Santé</a><a href="/farines/">⚖️ Farines</a><a href="/guides/">📖 Conseils</a></div></nav>
+
+<div class="welcome-hero">
+  <div class="welcome-inner">
+    <span class="welcome-eyebrow">🌿 Le site sans gluten N°1 en France</span>
+    <h1 class="welcome-title">Vis sans gluten,<br/>sans te priver.</h1>
+    <p class="welcome-sub">Recettes testées, conseils santé, comparatifs de farines. Tout ce qu'il faut pour vivre sans gluten en toute confiance. Rejoins 100 000 femmes de notre communauté.</p>
+    <div class="welcome-img-cards">
+      <a class="welcome-img-card" href="https://www.whynottraining.fr/08c32d2c-1fbf916c-b0fd38be-d95c800f-ee160319-0993e605" target="_blank">
+        <img src="/assets/guide.png" alt="Guide de survie de l'intolérante au gluten"/>
+        <div class="welcome-img-card-label">🎁 Guide gratuit — Je le veux</div>
+      </a>
+      <a class="welcome-img-card" href="https://www.whynottraining.fr/ed790464" target="_blank">
+        <img src="/assets/bible.png" alt="La Bible des Farines Sans Gluten"/>
+        <div class="welcome-img-card-label">📚 La Bible des Farines — Découvrir</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="reassurance">
+  <div class="reassurance-track"><span>✅ Informations vérifiées</span><span>👥 100 000 membres</span><span>🔄 Mis à jour chaque jour</span><span>🎁 Guide de survie GRATUIT</span><span>🏆 Site N°1 sans gluten en France</span><span>🍞 Recettes approuvées par la communauté</span><span>✅ Informations vérifiées</span><span>👥 100 000 membres</span><span>🔄 Mis à jour chaque jour</span><span>🎁 Guide de survie GRATUIT</span><span>🏆 Site N°1 sans gluten en France</span><span>🍞 Recettes approuvées par la communauté</span></div>
+</div>
+
+<!-- SECTION 1 : Recettes du moment -->
+<div class="home-wrap">
+  <div class="section-head">
+    <h2 class="section-title">🍞 Recettes du moment</h2>
+    <a class="section-link" href="/recettes/">Tout voir →</a>
+  </div>
+  <div class="subcats">
+    <button class="subcat active" onclick="filterHome('toutes',this)">🍽️ Toutes</button>
+    <button class="subcat" onclick="filterHome('pain',this)">🍞 Pain</button>
+    <button class="subcat" onclick="filterHome('gateaux',this)">🎂 Gâteaux</button>
+    <button class="subcat" onclick="filterHome('crepes',this)">🥞 Crêpes</button>
+    <button class="subcat" onclick="filterHome('plats',this)">🍽️ Plats</button>
+    <button class="subcat" onclick="filterHome('soupes',this)">🍲 Soupes</button>
+  </div>
+  <div class="articles-grid" id="recettesGrid">
+<a href="/recettes/tarte-tatin-pommes-sans-gluten.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1568571780765-9276ac8b75a2?w=800&q=80" alt="Tarte tatin aux pommes sans gluten : la recette parfaite" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Tarte tatin aux pommes sans gluten : la recette parfaite</div></div></a>
+<a href="/recettes/tarte-citron-meringuee-sans-gluten.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=800&q=80" alt="Tarte au citron meringuée sans gluten : recette légère" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Tarte au citron meringuée sans gluten : recette légère</div></div></a>
+<a href="/recettes/soupe-veloute-courge-sans-gluten.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?w=800&q=80" alt="Velouté de courge butternut sans gluten crémeux" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Velouté de courge butternut sans gluten crémeux</div></div></a>
+<a href="/recettes/soupe-minestrone-sans-gluten.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1547592180-85f173990554?w=800&q=80" alt="Minestrone sans gluten complet et nourrissant" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Minestrone sans gluten complet et nourrissant</div></div></a>
+<a href="/recettes/quiche-lorraine-sans-gluten.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1559650656-5d1d361ad10e?w=800&q=80" alt="Quiche lorraine sans gluten : la recette inratable" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Quiche lorraine sans gluten : la recette inratable</div></div></a>
+<a href="/recettes/pizza-sans-gluten-base-croustillante.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=800&q=80" alt="Pizza sans gluten : la base croustillante qui change tout" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Pizza sans gluten : la base croustillante qui change tout</div></div></a>
+  </div>
+</div>
+<script>
+function filterHome(cat,btn){
+  document.querySelectorAll('.subcats .subcat').forEach(function(b){b.classList.remove('active')});
+  btn.classList.add('active');
+  document.querySelectorAll('#recettesGrid .card').forEach(function(c){
+    var href=c.getAttribute('href')||'';
+    var title=c.querySelector('.card-title');
+    var text=(href+' '+(title?title.textContent:'')).toLowerCase();
+    var show=cat==='toutes';
+    if(!show){
+      if(cat==='pain'&&/pain|baguette|mie|brioche|chataigne/.test(text))show=true;
+      if(cat==='gateaux'&&/gateau|cake|brownie|cookie|muffin|tarte|citron|tatin|dessert/.test(text))show=true;
+      if(cat==='crepes'&&/crepe|galette|pancake|sarrasin/.test(text))show=true;
+      if(cat==='plats'&&/lasagne|quiche|pizza|plat|gratin/.test(text))show=true;
+      if(cat==='soupes'&&/soupe|veloute|minestrone|bouillon/.test(text))show=true;
+    }
+    c.style.display=show?'':'none';
+  });
 }
+</script>
 
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{overflow-x:hidden;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--warm);color:var(--ink);overflow-x:hidden;line-height:1.6}
-a{text-decoration:none;color:inherit}
-img{max-width:100%;height:auto;display:block}
-button{cursor:pointer;font-family:inherit}
+<!-- SECTION 2 : Derniers articles -->
+<div class="home-wrap">
+  <div class="section-head">
+    <h2 class="section-title">🆕 Derniers articles</h2>
+  </div>
+  <div class="articles-grid">
+<a href="/sante/test-intolerance-gluten-maison.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80" alt="Comment tester son intolérance au gluten soi-même à la maison" loading="lazy"/></div><div class="card-body"><div class="card-cat">🌿 Santé</div><div class="card-title">Comment tester son intolérance au gluten soi-même à la maison</div></div></a>
+<a href="/sante/sans-gluten-prise-de-poids-science.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80" alt="Sans gluten et prise de poids : ce que dit vraiment la science" loading="lazy"/></div><div class="card-body"><div class="card-cat">🌿 Santé</div><div class="card-title">Sans gluten et prise de poids : ce que dit vraiment la science</div></div></a>
+<a href="/sante/sans-gluten-grossesse.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1544126592-807ade215a0b?w=800&q=80" alt="Grossesse et régime sans gluten : ce qu'il faut savoir" loading="lazy"/></div><div class="card-body"><div class="card-cat">🌿 Santé</div><div class="card-title">Grossesse et régime sans gluten : ce qu'il faut savoir</div></div></a>
+<a href="/sante/regime-sans-gluten-sportif.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80" alt="Régime sans gluten et sport : comment maintenir ses performances" loading="lazy"/></div><div class="card-body"><div class="card-cat">🌿 Santé</div><div class="card-title">Régime sans gluten et sport : comment maintenir ses performances</div></div></a>
+<a href="/sante/maladie-coeliaque-aliments-pieges.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80" alt="Maladie coeliaque : les 15 aliments pièges à éviter absolument" loading="lazy"/></div><div class="card-body"><div class="card-cat">🌿 Santé</div><div class="card-title">Maladie coeliaque : les 15 aliments pièges à éviter absolument</div></div></a>
+<a href="/sante/gluten-et-sante-mentale.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="Gluten et santé mentale : anxiété, dépression et brouillard mental" loading="lazy"/></div><div class="card-body"><div class="card-cat">🌿 Santé</div><div class="card-title">Gluten et santé mentale : anxiété, dépression et brouillard mental</div></div></a>
+  </div>
+</div>
 
-.top-bar{background:var(--ink);color:rgba(255,255,255,.85);text-align:center;padding:.45rem 1rem;font-size:.72rem;line-height:1.6}
-.top-bar a{color:var(--gold);font-weight:700;text-decoration:underline}
+<!-- SECTION 3 : Santé -->
+<div class="home-wrap">
+  <div class="section-head">
+    <h2 class="section-title">🌿 Santé</h2>
+    <a class="section-link" href="/sante/">Tout voir →</a>
+  </div>
+  <div class="articles-grid">
+<a href="/sante/test-intolerance-gluten-maison.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80" alt="Comment tester son intolérance au gluten soi-même à la maison" loading="lazy"/></div><div class="card-body"><div class="card-cat">🌿 Santé</div><div class="card-title">Comment tester son intolérance au gluten soi-même à la maison</div></div></a>
+<a href="/sante/sans-gluten-prise-de-poids-science.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80" alt="Sans gluten et prise de poids : ce que dit vraiment la science" loading="lazy"/></div><div class="card-body"><div class="card-cat">🌿 Santé</div><div class="card-title">Sans gluten et prise de poids : ce que dit vraiment la science</div></div></a>
+<a href="/sante/sans-gluten-grossesse.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1544126592-807ade215a0b?w=800&q=80" alt="Grossesse et régime sans gluten : ce qu'il faut savoir" loading="lazy"/></div><div class="card-body"><div class="card-cat">🌿 Santé</div><div class="card-title">Grossesse et régime sans gluten : ce qu'il faut savoir</div></div></a>
+<a href="/sante/regime-sans-gluten-sportif.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80" alt="Régime sans gluten et sport : comment maintenir ses performances" loading="lazy"/></div><div class="card-body"><div class="card-cat">🌿 Santé</div><div class="card-title">Régime sans gluten et sport : comment maintenir ses performances</div></div></a>
+  </div>
+</div>
 
-.site-header{background:var(--white);border-bottom:1px solid var(--border);padding:.7rem 1.5rem;display:flex;align-items:center;gap:1rem;position:sticky;top:0;z-index:200;box-shadow:var(--shadow-sm)}
-.logo-wrap{flex-shrink:0}
-.logo{font-family:'Georgia',serif;font-weight:700;font-size:1.6rem;color:var(--ink);line-height:1;letter-spacing:-.02em}
-.logo em{color:var(--gold);font-style:normal}
-.logo-sub{font-size:.58rem;color:var(--gray);letter-spacing:.1em;text-transform:uppercase;display:block;margin-top:.2rem}
-.header-search{flex:1;max-width:300px;background:var(--gray-light);border:1.5px solid var(--border);border-radius:99px;padding:.45rem 1.1rem;font-size:.8rem;color:var(--ink);outline:none;font-family:inherit;transition:border-color .2s,background .2s}
-.header-search:focus{background:var(--white);border-color:var(--gold)}
-.header-search::placeholder{color:var(--gray)}
+<!-- SECTION 4 : Farines -->
+<div class="home-wrap">
+  <div class="section-head">
+    <h2 class="section-title">⚖️ Farines</h2>
+    <a class="section-link" href="/farines/">Tout voir →</a>
+  </div>
+  <div class="articles-grid">
+<a href="/farines/top-8-farines-sans-gluten-2025.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1585478259715-4c6d5047b7c1?w=800&q=80" alt="Top 8 des farines sans gluten en 2025 : notre classement complet" loading="lazy"/></div><div class="card-body"><div class="card-cat">⚖️ Farines</div><div class="card-title">Top 8 des farines sans gluten en 2025 : notre classement complet</div></div></a>
+<a href="/farines/psyllium-ingredient-cle-sans-gluten.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=1200&q=80" alt="Psyllium : l'ingrédient indispensable de la boulangerie sans gluten" loading="lazy"/></div><div class="card-body"><div class="card-cat">⚖️ Farines</div><div class="card-title">Psyllium : l'ingrédient indispensable de la boulangerie sans gluten</div></div></a>
+<a href="/farines/mix-farines-maison-tout-usage.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1585478259715-4c6d5047b7c1?w=800&q=80" alt="Créer son mix de farines sans gluten maison tout usage" loading="lazy"/></div><div class="card-body"><div class="card-cat">⚖️ Farines</div><div class="card-title">Créer son mix de farines sans gluten maison tout usage</div></div></a>
+<a href="/farines/feculents-sans-gluten-differences.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1200&q=80" alt="Maïzena, fécule de tapioca, arrow-root : quelles différences ?" loading="lazy"/></div><div class="card-body"><div class="card-cat">⚖️ Farines</div><div class="card-title">Maïzena, fécule de tapioca, arrow-root : quelles différences ?</div></div></a>
+  </div>
+</div>
 
-.site-nav{background:var(--ink)}
-.site-nav-inner{max-width:1200px;margin:0 auto;padding:0 1.5rem;display:flex;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;justify-content:center}
-.site-nav-inner::-webkit-scrollbar{display:none}
-.site-nav a{color:rgba(255,255,255,.65);font-size:1.25rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase;padding:.9rem 1.5rem;display:block;white-space:nowrap;transition:color .2s;border-bottom:2px solid transparent}
-.site-nav a:hover,.site-nav a.active{color:var(--white);border-bottom-color:var(--gold)}
+<!-- SECTION 5 : Conseils -->
+<div class="home-wrap">
+  <div class="section-head">
+    <h2 class="section-title">📖 Conseils</h2>
+    <a class="section-link" href="/guides/">Tout voir →</a>
+  </div>
+  <div class="articles-grid">
+<a href="/guides/voyage-sans-gluten-europe.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Voyage sans gluten en Europe : les 10 pays les plus accueillants" loading="lazy"/></div><div class="card-body"><div class="card-cat">📖 Conseils</div><div class="card-title">Voyage sans gluten en Europe : les 10 pays les plus accueillants</div></div></a>
+<a href="/guides/sans-gluten-restaurant.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Sans gluten au restaurant : comment commander sans se tromper" loading="lazy"/></div><div class="card-body"><div class="card-cat">📖 Conseils</div><div class="card-title">Sans gluten au restaurant : comment commander sans se tromper</div></div></a>
+<a href="/guides/sans-gluten-noel-fetes.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1482575832494-771f74bf6857?w=800&q=80" alt="Noël sans gluten : comment gérer les fêtes en famille" loading="lazy"/></div><div class="card-body"><div class="card-cat">📖 Conseils</div><div class="card-title">Noël sans gluten : comment gérer les fêtes en famille</div></div></a>
+<a href="/guides/sans-gluten-ecole-enfants.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80" alt="Mon enfant intolérant au gluten à l'école : guide pratique" loading="lazy"/></div><div class="card-body"><div class="card-cat">📖 Conseils</div><div class="card-title">Mon enfant intolérant au gluten à l'école : guide pratique</div></div></a>
+  </div>
+</div>
 
-.reassurance{background:var(--white);border-bottom:1px solid var(--border);overflow:hidden;white-space:nowrap;padding:.5rem 0}
-.reassurance-track{display:inline-block;animation:ticker 25s linear infinite;white-space:nowrap}
-.reassurance-track span{margin:0 2rem;font-size:.72rem;color:var(--gray);font-weight:500}
-@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+<!-- SECTION 6 : Avis -->
+<div class="home-wrap">
+  <div class="section-head">
+    <h2 class="section-title">💬 Ce que dit notre communauté</h2>
+  </div>
+  <div class="avis-overflow">
+    <div class="avis-track" id="avisTrack">
+      <div class="testimonial-card"><div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testimonial-text">Depuis que j'ai découvert ce site, je ne me sens plus seule dans mon intolérance. Les recettes sont simples et vraiment délicieuses !</p><p class="testimonial-name"><span class="avis-name-tag">Sophie M.</span><span class="avis-ville">Lyon</span></p></div>
+      <div class="testimonial-card"><div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testimonial-text">J'ai enfin réussi à faire un pain sans gluten qui ressemble à un vrai pain. La recette de la baguette est incroyable !</p><p class="testimonial-name"><span class="avis-name-tag">Marie-Claire D.</span><span class="avis-ville">Paris</span></p></div>
+      <div class="testimonial-card"><div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testimonial-text">Le guide des farines m'a sauvé la mise. Je ne savais pas comment remplacer la farine de blé, maintenant je cuisine comme avant !</p><p class="testimonial-name"><span class="avis-name-tag">Isabelle T.</span><span class="avis-ville">Bordeaux</span></p></div>
+      <div class="testimonial-card"><div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testimonial-text">Ma fille cœliaque peut enfin manger comme les autres enfants. Les recettes de gâteaux sont bluffantes !</p><p class="testimonial-name"><span class="avis-name-tag">Nathalie R.</span><span class="avis-ville">Toulouse</span></p></div>
+      <div class="testimonial-card"><div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testimonial-text">Les articles sur la santé sont très bien documentés. J'ai enfin compris pourquoi je me sentais si fatiguée depuis des années.</p><p class="testimonial-name"><span class="avis-name-tag">Céline B.</span><span class="avis-ville">Nantes</span></p></div>
+      <div class="testimonial-card"><div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testimonial-text">Le brownie aux haricots noirs, j'étais sceptique, mais maintenant c'est la recette que je fais le plus souvent !</p><p class="testimonial-name"><span class="avis-name-tag">Aurélie F.</span><span class="avis-ville">Strasbourg</span></p></div>
+      <div class="testimonial-card"><div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testimonial-text">Enfin un site sérieux sur le sans gluten ! Les informations sont claires, les recettes testées. Je recommande !</p><p class="testimonial-name"><span class="avis-name-tag">Patricia L.</span><span class="avis-ville">Marseille</span></p></div>
+      <div class="testimonial-card"><div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testimonial-text">J'ai suivi les conseils pour les restaurants et je n'ai plus peur de sortir manger. Les astuces sont vraiment efficaces !</p><p class="testimonial-name"><span class="avis-name-tag">Julie M.</span><span class="avis-ville">Lille</span></p></div>
+      <div class="testimonial-card"><div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testimonial-text">Les galettes de sarrasin sont maintenant un classique chez nous le dimanche. Recette parfaite, résultat professionnel !</p><p class="testimonial-name"><span class="avis-name-tag">Émilie C.</span><span class="avis-ville">Rennes</span></p></div>
+      <div class="testimonial-card"><div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testimonial-text">Grâce à ce site j'ai perdu 5 kilos en 3 mois en changeant ma façon de cuisiner sans gluten. Les conseils sont précieux !</p><p class="testimonial-name"><span class="avis-name-tag">Valérie H.</span><span class="avis-ville">Nice</span></p></div>
+    </div>
+  </div>
+</div>
+<style>
+.avis-overflow{overflow:hidden}
+.avis-track{display:flex;gap:3rem;width:max-content;animation:scrollAvis 90s linear infinite;align-items:stretch}
+.avis-track:hover{animation-play-state:paused}
+.avis-track .testimonial-card{width:260px;white-space:normal;flex-shrink:0}
+.avis-track .testimonial-name{display:flex;align-items:center;gap:.5rem;justify-content:center;margin-top:.75rem}
+.avis-name-tag{background:#5c3d2e;color:#fff;font-size:.75rem;font-weight:700;padding:.2rem .6rem;border-radius:4px;font-family:var(--sans)}
+.avis-ville{font-size:.78rem;color:var(--gray);font-family:var(--sans)}
+@keyframes scrollAvis{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+</style>
+<script>(function(){var t=document.getElementById('avisTrack');if(t)t.innerHTML+=t.innerHTML;})();</script>
 
-.breadcrumb{max-width:1200px;margin:1rem auto;padding:0 1.5rem;font-size:.72rem;color:var(--gray);display:flex;align-items:center;flex-wrap:wrap;gap:.3rem}
-.breadcrumb a{color:var(--gold)}
-.breadcrumb a:hover{text-decoration:underline}
-.breadcrumb span{opacity:.5}
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="https://www.whynottraining.fr/08c32d2c-1fbf916c-b0fd38be-d95c800f-ee160319-0993e605" target="_blank">🎁 Guide gratuit</a>
+      <a href="https://www.whynottraining.fr/ed790464" target="_blank">📚 La Bible des Farines</a>
+      <a href="/a-propos.html">À propos</a>
+      <a href="/glossaire.html">Glossaire</a>
+      <a href="/mentions-legales.html">Mentions légales</a>
+      <a href="/cgv.html">CGV</a>
+    </div>
+    <p class="footer-legal">© 2026 Le Club Sans Gluten · Tous droits réservés</p>
+  </div>
+</footer>
 
-.welcome-hero{background:linear-gradient(160deg,#FDF9F4 0%,#F0E6D6 100%);padding:3.5rem 1.5rem 3rem;border-bottom:1px solid var(--border)}
-.welcome-inner{max-width:860px;margin:0 auto}
-.welcome-eyebrow{display:inline-flex;align-items:center;gap:.4rem;font-size:.7rem;color:var(--gold-dark);font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem;background:rgba(201,168,76,.12);padding:.3rem .75rem;border-radius:99px;border:1px solid rgba(201,168,76,.3)}
-.welcome-title{font-family:'Georgia',serif;font-weight:700;font-size:2.8rem;color:var(--ink);line-height:1.1;margin-bottom:1rem;letter-spacing:-.02em}
-.welcome-sub{font-size:.95rem;color:var(--gray);line-height:1.8;margin-bottom:2rem;max-width:560px}
-.welcome-img-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem;max-width:620px}
-.welcome-img-card{display:block;border-radius:var(--radius-lg);overflow:hidden;border:2px solid var(--border);transition:transform .25s,box-shadow .25s,border-color .25s;box-shadow:var(--shadow-sm)}
-.welcome-img-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:var(--shadow-lg)}
-.welcome-img-card img{width:100%;aspect-ratio:16/9;object-fit:cover}
-.welcome-img-card-label{background:var(--ink);color:var(--white);font-size:.78rem;font-weight:700;padding:.7rem 1rem;text-align:center}
+<div class="sticky-cta" id="stickyCta">
+  <a href="https://www.whynottraining.fr/08c32d2c-1fbf916c-b0fd38be-d95c800f-ee160319-0993e605" target="_blank" class="sticky-cta-btn">🎁 Guide gratuit — Je le veux !</a>
+  <button class="sticky-cta-close" onclick="document.getElementById('stickyCta').style.display='none'">✕</button>
+</div>
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>
+window.addEventListener('scroll',function(){
+  var s=window.scrollY;
+  document.getElementById('backToTop').style.display=s>400?'flex':'none';
+  document.getElementById('stickyCta').style.display=s>600?'flex':'none';
+});
+</script>
+<div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a1a;color:#fff;padding:1rem 1.5rem;z-index:9999;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-family:var(--sans);font-size:.875rem">
+  <p style="margin:0;flex:1;min-width:200px">🍪 Ce site utilise des cookies pour mesurer l'audience et améliorer votre expérience. <a href="/mentions-legales.html" style="color:var(--gold);text-decoration:underline">En savoir plus</a></p>
+  <div style="display:flex;gap:.75rem;flex-shrink:0">
+    <button onclick="acceptCookies()" style="background:var(--gold);color:#1a1a1a;border:none;padding:.5rem 1.2rem;border-radius:6px;font-weight:700;cursor:pointer;font-size:.875rem">Accepter</button>
+    <button onclick="refuseCookies()" style="background:transparent;color:#fff;border:1px solid #555;padding:.5rem 1.2rem;border-radius:6px;cursor:pointer;font-size:.875rem">Refuser</button>
+  </div>
+</div>
+<script>
+(function(){var consent=localStorage.getItem('cookie_consent');if(!consent)document.getElementById('cookieBanner').style.display='flex';})();
+function acceptCookies(){localStorage.setItem('cookie_consent','accepted');document.getElementById('cookieBanner').style.display='none';}
+function refuseCookies(){localStorage.setItem('cookie_consent','refused');document.getElementById('cookieBanner').style.display='none';}
+</script>
 
-.home-wrap{max-width:1200px;margin:0 auto;padding:0 1.5rem 5rem}
-.section-head{display:flex;align-items:center;justify-content:space-between;margin:3rem 0 1.25rem;padding-bottom:.75rem;border-bottom:2px solid var(--border)}
-.section-title{font-family:'Georgia',serif;font-weight:700;font-size:1.4rem;display:flex;align-items:center;gap:.6rem;color:var(--ink)}
-.section-title::before{content:'';display:block;width:4px;height:1.3em;background:var(--gold);border-radius:2px;flex-shrink:0}
-.section-link{font-size:.78rem;color:var(--gold);font-weight:700;transition:color .2s}
-.section-link:hover{color:var(--gold-dark)}
-
-.subcats{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem;overflow-x:auto;scrollbar-width:none;padding-bottom:.25rem}
-.subcats::-webkit-scrollbar{display:none}
-.subcat{background:var(--white);border:1.5px solid var(--border);border-radius:99px;padding:.4rem 1rem;font-size:.75rem;font-weight:600;color:var(--gray);cursor:pointer;white-space:nowrap;transition:all .2s}
-.subcat.active,.subcat:hover{background:var(--gold);border-color:var(--gold);color:var(--ink)}
-
-.articles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-.card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;transition:transform .25s,box-shadow .25s;text-decoration:none;display:block;color:inherit}
-.card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
-.card-img-wrap{overflow:hidden;aspect-ratio:16/9}
-.card-img{width:100%;height:100%;object-fit:cover;display:block;background:var(--border);transition:transform .4s}
-.card:hover .card-img{transform:scale(1.04)}
-.card-body{padding:1rem 1.1rem 1.2rem}
-.card-cat{font-size:.63rem;font-weight:700;text-transform:uppercase;color:var(--gold-dark);letter-spacing:.07em;margin-bottom:.4rem}
-.card-title{font-family:'Georgia',serif;font-weight:700;font-size:.95rem;line-height:1.4;margin-bottom:.5rem;color:var(--ink)}
-.card-meta{font-size:.7rem;color:var(--gray);display:flex;gap:.75rem}
-
-.article-wrap{max-width:780px;margin:0 auto;padding:1.5rem 1.5rem 5rem}
-.article-hero{width:100%;border-radius:var(--radius-lg);margin-bottom:2rem;aspect-ratio:21/9;object-fit:cover;max-height:380px}
-.article-cat{display:inline-block;background:var(--gold);color:var(--ink);font-size:.63rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .75rem;border-radius:4px;margin-bottom:.85rem}
-.article-title{font-family:'Georgia',serif;font-weight:700;font-size:2.1rem;line-height:1.2;margin-bottom:.85rem;color:var(--ink);letter-spacing:-.02em}
-.article-meta{display:flex;gap:1.25rem;font-size:.75rem;color:var(--gray);margin-bottom:2rem;padding-bottom:1.5rem;border-bottom:2px solid var(--border);flex-wrap:wrap}
-.article-body{font-size:1rem;line-height:1.85;color:#2A241E}
-.article-body h2{font-family:'Georgia',serif;font-weight:700;font-size:1.4rem;margin:2.5rem 0 .85rem;color:var(--ink);padding-top:.5rem;border-top:1px solid var(--border)}
-.article-body h3{font-family:'Georgia',serif;font-weight:700;font-size:1.15rem;margin:1.75rem 0 .6rem;color:var(--ink)}
-.article-body p{margin-bottom:1.1rem}
-.article-body ul,.article-body ol{margin:1rem 0 1.25rem 1.5rem;display:flex;flex-direction:column;gap:.5rem}
-.article-body li{line-height:1.7}
-.article-body strong{font-weight:700;color:var(--ink)}
-.article-body img{width:100%;border-radius:var(--radius);margin:1.5rem 0}
-.article-body table{width:100%;border-collapse:collapse;margin:1.75rem 0;font-size:.88rem;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm)}
-.article-body th{background:var(--ink);color:var(--white);padding:.75rem 1rem;text-align:left;font-size:.8rem}
-.article-body td{padding:.7rem 1rem;border-bottom:1px solid var(--border)}
-.article-body tr:last-child td{border-bottom:none}
-.article-body tr:nth-child(even) td{background:var(--gray-light)}
-
-.cta-box{background:linear-gradient(135deg,#1A1510,#2d2015);border-radius:var(--radius-lg);padding:2.25rem 2rem;margin:2.5rem 0;text-align:center;color:var(--white);position:relative;overflow:hidden}
-.cta-box h3{font-family:'Georgia',serif;font-weight:700;font-size:1.3rem;margin-bottom:.6rem}
-.cta-box p{font-size:.88rem;color:rgba(255,255,255,.72);margin-bottom:1.5rem;line-height:1.7}
-.cta-btn{display:inline-block;background:var(--gold);color:var(--ink);font-weight:700;padding:.9rem 2rem;border-radius:var(--radius);font-size:.92rem;transition:background .2s,transform .2s}
-.cta-btn:hover{background:#d4b05a;transform:translateY(-1px)}
-
-.share-bar{display:flex;align-items:center;gap:.6rem;margin:2rem 0;padding:1rem 1.25rem;background:var(--white);border-radius:var(--radius);border:1px solid var(--border);flex-wrap:wrap}
-.share-bar p{font-weight:700;font-size:.82rem;color:var(--ink);white-space:nowrap;margin-right:.25rem}
-.share-btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;padding:.55rem 1rem;border-radius:var(--radius);font-size:.78rem;font-weight:700;border:none;transition:opacity .2s,transform .15s;white-space:nowrap;flex:1;min-width:85px;max-width:140px}
-.share-btn:hover{opacity:.88;transform:translateY(-1px)}
-.share-fb{background:#1877F2;color:var(--white)}
-.share-wa{background:#25D366;color:var(--white)}
-.share-copy{background:var(--gray-light);color:var(--ink);border:1px solid var(--border)}
-
-.disclaimer{background:#FFF8E6;border:1px solid #F0C040;border-left:4px solid #F0C040;border-radius:var(--radius);padding:1rem 1.25rem;font-size:.78rem;color:#7A5800;margin:2rem 0;line-height:1.7}
-
-.related{margin:3rem 0}
-.related h2{font-family:'Georgia',serif;font-weight:700;font-size:1.2rem;margin-bottom:1.25rem;color:var(--ink);padding-bottom:.75rem;border-bottom:2px solid var(--border)}
-.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-.related-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:transform .2s,box-shadow .2s;text-decoration:none;display:block;color:inherit}
-.related-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
-.related-card img{width:100%;aspect-ratio:16/9;object-fit:cover}
-.related-card-body{padding:.85rem}
-.related-card-cat{font-size:.62rem;font-weight:700;text-transform:uppercase;color:var(--gold-dark);letter-spacing:.06em}
-.related-card-title{font-family:'Georgia',serif;font-weight:700;font-size:.85rem;margin-top:.3rem;line-height:1.35;color:var(--ink)}
-
-.site-footer{background:var(--ink);color:rgba(255,255,255,.55);text-align:center;padding:2.5rem 1.5rem;font-size:.75rem;line-height:2.2}
-.site-footer a{color:var(--gold)}
-.site-footer a:hover{text-decoration:underline}
-
-.popup-overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:1000;display:flex;align-items:center;justify-content:center;padding:1rem;opacity:0;pointer-events:none;transition:opacity .3s}
-.popup-overlay.open{opacity:1;pointer-events:all}
-.popup-box{background:var(--white);border-radius:var(--radius-lg);max-width:400px;width:100%;overflow:hidden;transform:translateY(24px) scale(.97);transition:transform .3s;box-shadow:var(--shadow-lg)}
-.popup-overlay.open .popup-box{transform:translateY(0) scale(1)}
-.popup-close{position:absolute;top:.75rem;right:.75rem;background:rgba(0,0,0,.5);border:none;color:var(--white);width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:background .2s}
-.popup-close:hover{background:rgba(0,0,0,.7)}
-.popup-box-inner{position:relative}
-.popup-content{padding:1.5rem}
-.popup-content h3{font-family:'Georgia',serif;font-weight:700;font-size:1.15rem;margin-bottom:.5rem;color:var(--ink)}
-.popup-content p{font-size:.83rem;color:var(--gray);margin-bottom:1.25rem;line-height:1.65}
-
-@media(max-width:900px){
-  .articles-grid{grid-template-columns:repeat(2,1fr);gap:1rem}
-  .related-grid{grid-template-columns:repeat(2,1fr)}
-  .welcome-title{font-size:2.2rem}
-}
-@media(max-width:600px){
-  .site-header{padding:.6rem 1rem}
-  .logo{font-size:1.35rem}
-  .header-search{display:none}
-  .site-nav a{font-size:1rem;padding:.8rem 1rem}
-  .welcome-hero{padding:2rem 1rem}
-  .welcome-title{font-size:1.75rem}
-  .welcome-sub{font-size:.88rem}
-  .welcome-img-cards{grid-template-columns:1fr;max-width:100%}
-  .home-wrap{padding:0 1rem 4rem}
-  .articles-grid{grid-template-columns:1fr;gap:.85rem}
-  .related-grid{grid-template-columns:1fr 1fr;gap:.75rem}
-  .section-head{margin:2rem 0 1rem}
-  .section-title{font-size:1.15rem}
-  .article-wrap{padding:1rem 1rem 4rem}
-  .article-title{font-size:1.5rem}
-  .article-body{font-size:.93rem}
-  .article-body h2{font-size:1.2rem}
-  .article-meta{gap:.75rem}
-  .cta-box{padding:1.5rem 1.25rem}
-  .cta-box h3{font-size:1.1rem}
-  .cta-btn{width:100%;display:block;text-align:center}
-  .share-bar{padding:.85rem 1rem;gap:.5rem}
-  .share-btn{font-size:.75rem;padding:.55rem .6rem;flex:1;min-width:0;max-width:none}
-  .article-body table{font-size:.78rem}
-  .article-body th,.article-body td{padding:.5rem .6rem}
-  .top-bar{font-size:.68rem}
-}
-@media(max-width:380px){
-  .logo{font-size:1.2rem}
-  .welcome-title{font-size:1.5rem}
-  .site-nav a{font-size:.95rem;padding:.75rem .8rem}
-}
-
-/* ── SEARCH ── */
-.header-search-wrap{flex:1;max-width:320px;position:relative}
-.header-search{width:100%;background:var(--gray-light);border:1.5px solid var(--border);border-radius:99px;padding:.45rem 1.1rem;font-size:.8rem;color:var(--ink);outline:none;font-family:inherit;transition:border-color .2s,background .2s}
-.header-search:focus{background:var(--white);border-color:var(--gold)}
-.header-search::placeholder{color:var(--gray)}
-.search-results{display:none;position:absolute;top:110%;left:0;right:0;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-lg);z-index:300;overflow:hidden}
-.search-result-item{display:flex;flex-direction:column;padding:.75rem 1rem;border-bottom:1px solid var(--border);transition:background .15s;text-decoration:none;color:inherit}
-.search-result-item:last-child{border-bottom:none}
-.search-result-item:hover{background:var(--gray-light)}
-.search-result-cat{font-size:.62rem;font-weight:700;text-transform:uppercase;color:var(--gold-dark);letter-spacing:.06em;margin-bottom:.2rem}
-.search-result-title{font-size:.83rem;font-weight:600;color:var(--ink);line-height:1.3}
-
-/* ── SEARCH IN CATEGORY PAGE ── */
-.cat-search-bar{display:flex;gap:.75rem;margin-bottom:1.5rem;align-items:center}
-.cat-search-input{flex:1;background:var(--white);border:1.5px solid var(--border);border-radius:99px;padding:.55rem 1.25rem;font-size:.85rem;color:var(--ink);outline:none;font-family:inherit;transition:border-color .2s}
-.cat-search-input:focus{border-color:var(--gold)}
-.cat-search-input::placeholder{color:var(--gray)}
-
-/* ── READ PROGRESS ── */
-.read-progress{position:fixed;top:0;left:0;height:3px;background:var(--gold);z-index:9999;transition:width .1s linear;width:0}
-
-/* ── STICKY CTA ── */
-.sticky-cta{position:fixed;bottom:0;left:0;right:0;background:var(--ink);padding:.7rem 1rem;display:flex;align-items:center;justify-content:center;gap:.75rem;z-index:500;transform:translateY(100%);transition:transform .3s;box-shadow:0 -4px 16px rgba(0,0,0,.2)}
-.sticky-cta.visible{transform:translateY(0)}
-.sticky-cta-btn{background:var(--gold);color:var(--ink);font-weight:700;font-size:.85rem;padding:.6rem 1.5rem;border-radius:4px;white-space:nowrap}
-.sticky-cta-close{background:none;border:none;color:rgba(255,255,255,.5);font-size:1rem;padding:.25rem .5rem;flex-shrink:0}
-.sticky-cta-close:hover{color:var(--white)}
-
-/* ── BACK TO TOP ── */
-.back-to-top{position:fixed;bottom:5rem;right:1.25rem;background:var(--ink);color:var(--white);border:none;width:40px;height:40px;border-radius:50%;font-size:1.1rem;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .3s;z-index:400;box-shadow:var(--shadow-md)}
-.back-to-top.visible{opacity:1;transform:translateY(0)}
-.back-to-top:hover{background:var(--gold);color:var(--ink)}
-
-/* ── FAQ ── */
-.faq-block{margin:2.5rem 0;background:var(--white);border-radius:var(--radius-lg);border:1px solid var(--border);overflow:hidden;box-shadow:var(--shadow-sm)}
-.faq-block h2{font-family:'Georgia',serif;font-weight:700;font-size:1.15rem;color:var(--ink);padding:1.25rem 1.5rem;border-bottom:1px solid var(--border);background:var(--gray-light);margin:0}
-.faq-item{border-bottom:1px solid var(--border)}
-.faq-item:last-child{border-bottom:none}
-.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;padding:1rem 1.5rem;background:none;border:none;font-family:inherit;font-size:.92rem;font-weight:600;color:var(--ink);text-align:left;cursor:pointer;gap:1rem;transition:background .15s}
-.faq-q:hover{background:var(--gray-light)}
-.faq-icon{width:22px;height:22px;min-width:22px;border-radius:50%;background:var(--gold);color:var(--ink);display:inline-flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:700;flex-shrink:0;transition:transform .25s}
-.faq-item.open .faq-icon{transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
-.faq-item.open .faq-a{max-height:400px}
-.faq-a p{padding:.5rem 1.5rem 1.25rem;font-size:.9rem;line-height:1.8;color:var(--gray);margin:0}
-
-/* ── TESTIMONIALS ── */
-.testimonials-section{margin:3rem 0;padding:2.5rem 0;border-top:1px solid var(--border)}
-.testimonials-title{font-family:'Georgia',serif;font-weight:700;font-size:1.3rem;color:var(--ink);margin-bottom:1.5rem;text-align:center}
-.testimonials-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
-.testimonial-card{background:#FFFBF4;border:1px solid #EFE4CC;border-radius:var(--radius-lg);padding:1.5rem;box-shadow:var(--shadow-sm);position:relative}
-.testimonial-stars{display:flex;gap:3px;margin-bottom:.75rem}
-.testimonial-stars span{color:#F5A623;font-size:1.1rem}
-.testimonial-text{font-size:.9rem;line-height:1.75;color:#3a3028;margin-bottom:.85rem;font-style:italic}
-.testimonial-name{font-size:.75rem;font-weight:700;color:var(--gold-dark);display:flex;align-items:center;gap:.4rem}
-.testimonial-name::before{content:'';display:block;width:20px;height:2px;background:var(--gold)}
-
-/* ── FOOTER ── */
-.footer-inner{max-width:700px;margin:0 auto}
-.footer-logo{font-family:'Lora',Georgia,serif;font-weight:700;font-size:1.5rem;color:var(--white);margin-bottom:.75rem}
-.footer-logo span{color:var(--gold)}
-.footer-desc{font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:1.25rem;line-height:1.7}
-.footer-links{display:flex;gap:1.25rem;flex-wrap:wrap;justify-content:center;margin-bottom:1.25rem}
-.footer-links a{color:var(--gold);font-size:.78rem;font-weight:600}
-.footer-links a:hover{text-decoration:underline}
-.footer-legal{font-size:.75rem;color:rgba(255,255,255,.4);margin-bottom:.4rem}
-.footer-disclaimer{font-size:.65rem;color:rgba(255,255,255,.25);line-height:1.6;max-width:500px;margin:0 auto}
-
-/* ── ABOUT / GLOSSARY / CALC PAGES ── */
-.page-wrap{max-width:780px;margin:0 auto;padding:2rem 1.5rem 5rem}
-.page-title{font-family:'Lora',Georgia,serif;font-size:2rem;font-weight:700;margin-bottom:.75rem;color:var(--ink)}
-.page-body{font-size:.98rem;line-height:1.85;color:#2A241E}
-.page-body h2{font-family:'Lora',Georgia,serif;font-size:1.35rem;font-weight:700;margin:2rem 0 .75rem;color:var(--ink)}
-.page-body p{margin-bottom:1rem}
-.page-hero-img{width:100%;border-radius:var(--radius-lg);margin-bottom:2rem;aspect-ratio:16/9;object-fit:cover}
-
-/* ── GLOSSARY ── */
-.glossary-letter{font-family:'Lora',Georgia,serif;font-size:1.75rem;font-weight:700;color:var(--gold);margin:2rem 0 .75rem;padding-bottom:.5rem;border-bottom:2px solid var(--border)}
-.glossary-term{font-weight:700;font-size:1rem;color:var(--ink);margin-bottom:.25rem}
-.glossary-def{font-size:.88rem;color:var(--gray);line-height:1.7;margin-bottom:1.25rem}
-
-/* ── CALCULATOR ── */
-.calc-wrap{background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;margin:2rem 0;box-shadow:var(--shadow-sm)}
-.calc-title{font-family:'Lora',Georgia,serif;font-size:1.25rem;font-weight:700;margin-bottom:1.25rem;color:var(--ink)}
-.calc-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;align-items:end;margin-bottom:1rem}
-.calc-field label{display:block;font-size:.75rem;font-weight:600;color:var(--gray);margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.05em}
-.calc-field select,.calc-field input{width:100%;padding:.6rem .9rem;border:1.5px solid var(--border);border-radius:var(--radius);font-size:.9rem;font-family:inherit;color:var(--ink);background:var(--white);outline:none;transition:border-color .2s}
-.calc-field select:focus,.calc-field input:focus{border-color:var(--gold)}
-.calc-btn{background:var(--gold);color:var(--ink);border:none;padding:.7rem 1.5rem;border-radius:var(--radius);font-weight:700;font-size:.9rem;cursor:pointer;width:100%;transition:background .2s}
-.calc-btn:hover{background:var(--gold-dark)}
-.calc-result{background:var(--gray-light);border-radius:var(--radius);padding:1.25rem;margin-top:1.25rem;display:none}
-.calc-result.show{display:block}
-.calc-result h3{font-size:.88rem;font-weight:700;color:var(--ink);margin-bottom:.75rem}
-.calc-result-item{display:flex;justify-content:space-between;padding:.5rem 0;border-bottom:1px solid var(--border);font-size:.88rem}
-.calc-result-item:last-child{border-bottom:none}
-.calc-result-item span:last-child{font-weight:700;color:var(--gold-dark)}
-
-/* ── RESPONSIVE ADDITIONS ── */
-@media(max-width:600px){
-  .testimonials-grid{grid-template-columns:1fr}
-  .calc-row{grid-template-columns:1fr}
-  .back-to-top{bottom:4.5rem;right:.75rem;width:36px;height:36px}
-  .footer-links{gap:.75rem}
-  .header-search-wrap{max-width:160px}
-}
-
-/* ── Maillage interne ────────────────── */
-.related-articles {
-  margin: 2.5rem 0;
-  padding: 1.5rem;
-  background: var(--cream);
-  border-left: 3px solid var(--gold);
-  border-radius: 8px;
-}
-.related-articles h3 {
-  font-size: .85rem;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  color: var(--gold);
-  margin-bottom: 1rem;
-  font-family: var(--sans);
-}
-.related-links {
-  display: flex;
-  flex-direction: column;
-  gap: .6rem;
-}
-.related-link {
-  color: var(--ink);
-  text-decoration: none;
-  font-size: .92rem;
-  font-family: var(--sans);
-  transition: color .2s;
-}
-.related-link:hover {
-  color: var(--gold);
-}
-
-
-/* Sections homepage */
-.home-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
-.home-section .section-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 3rem 0 1.25rem;
-  padding-bottom: .75rem;
-  border-bottom: 2px solid var(--border);
-}
-.home-section:last-of-type {
-  margin-bottom: 3rem;
-}
-.avis-overflow {
-  overflow: hidden;
-  width: 100%;
-}
-@media (max-width: 768px) {
-  .home-section { padding: 0 1rem; }
-}
+</body>
+</html>
