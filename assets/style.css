@@ -350,3 +350,11 @@ button{cursor:pointer;font-family:inherit}
 @media (max-width: 768px) {
   .home-section { padding: 0 1rem; }
 }
+
+
+/* ── THÉMATIQUES ── */
+.thematic-nav{display:flex;gap:.75rem;flex-wrap:wrap;margin:1.5rem 0 2rem;justify-content:center}
+.thematic-btn{display:flex;flex-direction:column;align-items:center;gap:.35rem;padding:.7rem 1rem;border:2px solid var(--border);border-radius:12px;background:#fff;cursor:pointer;transition:all .2s;font-family:var(--sans);font-size:.78rem;font-weight:600;color:var(--gray);min-width:75px;line-height:1.2}
+.thematic-btn .th-icon{font-size:1.5rem}
+.thematic-btn:hover,.thematic-btn.active{border-color:var(--gold);color:var(--gold);background:#fffbf0}
+@media(max-width:600px){.thematic-nav{gap:.5rem}.thematic-btn{padding:.55rem .7rem;min-width:60px;font-size:.7rem}.thematic-btn .th-icon{font-size:1.2rem}}
