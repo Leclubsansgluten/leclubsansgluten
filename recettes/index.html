@@ -1,294 +1,124 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Le Club Sans Gluten — Recettes et conseils sans gluten N°1 en France</title>
-<meta name="description" content="Recettes sans gluten testées, conseils santé, comparatifs de farines. Rejoins 100 000 femmes qui vivent sans gluten sans se priver."/>
-<link rel="canonical" href="https://leclubsansgluten.com/"/>
-<meta property="og:title" content="Le Club Sans Gluten — Recettes et conseils sans gluten N°1 en France"/>
-<meta property="og:description" content="Recettes sans gluten testées, conseils santé, comparatifs de farines. Rejoins 100 000 femmes qui vivent sans gluten sans se priver."/>
+<html lang="fr"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>🍞 Recettes sans gluten — Articles et guides — Le Club Sans Gluten</title>
+<meta name="description" content="Recettes sans gluten testées et approuvées par notre communauté de 100 000 membres."/>
+<link rel="canonical" href="https://leclubsansgluten.com/recettes/"/>
+<meta property="og:title" content="Recettes sans gluten — Le Club Sans Gluten"/>
+<meta property="og:description" content="Recettes sans gluten testées et approuvées par notre communauté de 100 000 membres."/>
 <meta property="og:type" content="website"/>
-<meta property="og:url" content="https://leclubsansgluten.com/"/>
-<meta property="og:image" content="https://leclubsansgluten.com/assets/bible.png"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="/assets/style.css"/>
-<style>
-.header-search-wrap{position:relative}
-.search-results{display:none;position:absolute;top:calc(100% + 4px);left:0;right:0;background:#fff;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.15);z-index:1000;overflow:hidden;max-height:380px;overflow-y:auto}
-.search-result-item{display:flex;align-items:center;gap:.75rem;padding:.65rem 1rem;text-decoration:none;color:var(--ink);transition:background .15s;border-bottom:1px solid var(--border)}
-.search-result-item:last-child{border-bottom:none}
-.search-result-item:hover{background:var(--cream)}
-.search-result-img{width:48px;height:48px;object-fit:cover;border-radius:6px;flex-shrink:0}
-.search-result-body{display:flex;flex-direction:column;gap:.2rem;min-width:0}
-.search-result-cat{font-size:.7rem;color:var(--gold);font-weight:700;font-family:var(--sans);text-transform:uppercase}
-.search-result-title{font-size:.85rem;font-weight:600;color:var(--ink);line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-</style>
-<style>
-.quiz-card { background: linear-gradient(135deg, #2d1f14, #5c3d2e); }
-.quiz-card-inner { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; aspect-ratio: 16/9; padding: 1.5rem 1rem; text-align: center; gap: .6rem; }
-.quiz-card-cta-text { font-size: 1.1rem; font-weight: 800; color: var(--gold); font-family: var(--sans); text-transform: uppercase; letter-spacing: .05em; }
-.quiz-card-title { font-family: var(--serif); font-size: .8rem; font-weight: 700; color: #fff; line-height: 1.3; }
-.quiz-card-sub { font-size: .7rem; color: rgba(255,255,255,.5); margin-top: .25rem; }
-</style>
-</head>
-<body>
-
-<div class="top-bar">📚 <a href="https://www.whynottraining.fr/ed790464" target="_blank">La Bible des Farines Sans Gluten</a> — Maîtrise les farines sans gluten facilement → <a href="https://www.whynottraining.fr/ed790464" target="_blank">Je le veux</a></div>
-
-<header class="site-header">
-  <a href="/" class="logo-wrap">
-    <div class="logo">Le Club<em> Sans Gluten</em></div>
-    <span class="logo-sub">Le site info sans gluten N°1</span>
-  </a>
-  <div class="header-search-wrap">
-    <input type="text" class="header-search" placeholder="🔍 Rechercher..." id="headerSearch" autocomplete="off"/>
-    <div class="search-results" id="searchResults"></div>
-  </div>
-</header>
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Accueil","item":"https://leclubsansgluten.com/"},{"@type":"ListItem","position":2,"name":"Recettes","item":"https://leclubsansgluten.com/recettes/"}]}</script>
+</head><body>
+<div class="top-bar">📚 <a href="https://www.whynottraining.fr/ed790464" target="_blank">La Bible des Farines Sans Gluten</a> → <a href="https://www.whynottraining.fr/ed790464" target="_blank">Je le veux</a></div>
+<header class="site-header"><a href="/" class="logo-wrap"><div class="logo">Le Club<em> Sans Gluten</em></div><span class="logo-sub">Le site info sans gluten N°1</span></a><div class="header-search-wrap"><input type="text" class="header-search" placeholder="🔍 Rechercher..." id="headerSearch" autocomplete="off"/><div class="search-results" id="searchResults"></div></div></header>
 <nav class="site-nav"><div class="site-nav-inner"><a href="/recettes/">Recettes</a><a href="/sante/">Santé</a><a href="/farines/">Farines</a><a href="/guides/">Conseils</a></div></nav>
-
-<div class="welcome-hero">
-  <div class="welcome-inner">
-    <span class="welcome-eyebrow">🌿 Le site sans gluten N°1 en France</span>
-    <h1 class="welcome-title">Vis sans gluten,<br/>sans te priver.</h1>
-    <p class="welcome-sub">Recettes testées, conseils santé, comparatifs de farines. Tout ce qu'il faut pour vivre sans gluten en toute confiance. Rejoins 100 000 femmes de notre communauté.</p>
-    <div class="welcome-img-cards">
-      <a class="welcome-img-card" href="https://www.whynottraining.fr/08c32d2c-1fbf916c-b0fd38be-d95c800f-ee160319-0993e605" target="_blank">
-        <img src="/assets/guide.png" alt="Guide de survie de l'intolérante au gluten"/>
-        <div class="welcome-img-card-label">🎁 Guide gratuit — Je le veux</div>
-      </a>
-      <a class="welcome-img-card" href="https://www.whynottraining.fr/ed790464" target="_blank">
-        <img src="/assets/bible.png" alt="La Bible des Farines Sans Gluten"/>
-        <div class="welcome-img-card-label">📚 La Bible des Farines — Découvrir</div>
-      </a>
-      <a class="welcome-img-card quiz-card" href="https://www.whynottraining.fr/quiz-sans-gluten-5dc68ab1" target="_blank">
-        <div class="quiz-card-inner">
-          <div class="quiz-card-cta-text">Fais le test</div>
-          <div class="quiz-card-title">Quel profil d'intolérante es-tu ?</div>
-          <div class="quiz-card-sub">⏱ 1 min</div>
-        </div>
-        <div class="welcome-img-card-label">🎯 Quiz gratuit — Je le fais</div>
-      </a>
-    </div>
-  </div>
-</div>
-
-<div class="reassurance">
-  <div class="reassurance-track"><span>✅ Informations vérifiées</span><span>👥 100 000 membres</span><span>🔄 Mis à jour chaque jour</span><span>🎁 Guide de survie GRATUIT</span><span>🏆 Site N°1 sans gluten en France</span><span>🍞 Recettes approuvées par la communauté</span><span>✅ Informations vérifiées</span><span>👥 100 000 membres</span><span>🔄 Mis à jour chaque jour</span><span>🎁 Guide de survie GRATUIT</span><span>🏆 Site N°1 sans gluten en France</span><span>🍞 Recettes approuvées par la communauté</span></div>
-</div>
-
+<div class="breadcrumb"><a href="/">Accueil</a><span>›</span><span>🍞 Recettes</span></div>
 <div class="home-wrap">
-  <div class="section-head">
-    <h2 class="section-title">🍞 Recettes</h2>
-    <a class="section-link" href="/recettes/">Tout voir &rarr;</a>
-  </div>
-  <div class="articles-grid">
-<a href="/recettes/#rapide" class="card">
-  <div class="card-img-wrap" style="background:linear-gradient(135deg,#1a1a2e,#16213e);display:flex;align-items:center;justify-content:center;aspect-ratio:16/9"><span style="font-size:3rem">🚀</span></div>
-  <div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Recettes rapides</div></div>
-</a>
-<a href="/recettes/#pdej" class="card">
-  <div class="card-img-wrap" style="background:linear-gradient(135deg,#f8b400,#e65c00);display:flex;align-items:center;justify-content:center;aspect-ratio:16/9"><span style="font-size:3rem">🥐</span></div>
-  <div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Petit déjeuner</div></div>
-</a>
-<a href="/recettes/#entrees" class="card">
-  <div class="card-img-wrap" style="background:linear-gradient(135deg,#134e5e,#71b280);display:flex;align-items:center;justify-content:center;aspect-ratio:16/9"><span style="font-size:3rem">🥗</span></div>
-  <div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Entrées & Soupes</div></div>
-</a>
-<a href="/recettes/#plats" class="card">
-  <div class="card-img-wrap" style="background:linear-gradient(135deg,#c94b4b,#4b134f);display:flex;align-items:center;justify-content:center;aspect-ratio:16/9"><span style="font-size:3rem">🍽️</span></div>
-  <div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Plats principaux</div></div>
-</a>
-<a href="/recettes/#desserts" class="card">
-  <div class="card-img-wrap" style="background:linear-gradient(135deg,#f953c6,#b91d73);display:flex;align-items:center;justify-content:center;aspect-ratio:16/9"><span style="font-size:3rem">🎂</span></div>
-  <div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Desserts & Gâteaux</div></div>
-</a>
-<a href="/recettes/#pain" class="card">
-  <div class="card-img-wrap" style="background:linear-gradient(135deg,#5c3d2e,#2d1f14);display:flex;align-items:center;justify-content:center;aspect-ratio:16/9"><span style="font-size:3rem">🍞</span></div>
-  <div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Pain & Boulangerie</div></div>
-</a>
-  </div>
+  <div class="section-head" style="margin-top:1.5rem"><h1 class="section-title">🍞 Recettes</h1><span style="font-size:.78rem;color:var(--gray)">16 articles</span></div>
+  <div class="subcats">
+<button class="subcat active" onclick="filterCat('toutes',this)">🍽️ Toutes</button>
+<button class="subcat" onclick="filterCat('rapide',this)">🚀 Rapide</button>
+<button class="subcat" onclick="filterCat('pdej',this)">🥐 Petit déjeuner</button>
+<button class="subcat" onclick="filterCat('entrees',this)">🥗 Entrées</button>
+<button class="subcat" onclick="filterCat('plats',this)">🍽️ Plats</button>
+<button class="subcat" onclick="filterCat('desserts',this)">🎂 Desserts</button>
+<button class="subcat" onclick="filterCat('pain',this)">🍞 Pain</button>
 </div>
-
-<!-- SECTIONS_AUTO_DEBUT -->
-<div class="home-wrap">
-  <div class="section-head">
-    <h2 class="section-title">🆕 Derniers articles</h2>
-  </div>
-  <div class="articles-grid">
-<a href="/sante/test-intolerance-gluten-maison.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80" alt="Comment tester son intolérance au gluten soi-même à la maison" loading="lazy"/></div><div class="card-body"><div class="card-cat">🌿 Santé</div><div class="card-title">Comment tester son intolérance au gluten soi-même à la maison</div></div></a>
-<a href="/sante/sans-gluten-prise-de-poids-science.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80" alt="Sans gluten et prise de poids : ce que dit vraiment la science" loading="lazy"/></div><div class="card-body"><div class="card-cat">🌿 Santé</div><div class="card-title">Sans gluten et prise de poids : ce que dit vraiment la science</div></div></a>
-<a href="/sante/sans-gluten-grossesse.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1544126592-807ade215a0b?w=800&q=80" alt="Grossesse et régime sans gluten : ce qu'il faut savoir" loading="lazy"/></div><div class="card-body"><div class="card-cat">🌿 Santé</div><div class="card-title">Grossesse et régime sans gluten : ce qu'il faut savoir</div></div></a>
-<a href="/sante/regime-sans-gluten-sportif.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80" alt="Régime sans gluten et sport : comment maintenir ses performances" loading="lazy"/></div><div class="card-body"><div class="card-cat">🌿 Santé</div><div class="card-title">Régime sans gluten et sport : comment maintenir ses performances</div></div></a>
-<a href="/sante/maladie-coeliaque-aliments-pieges.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80" alt="Maladie coeliaque : les 15 aliments pièges à éviter absolument" loading="lazy"/></div><div class="card-body"><div class="card-cat">🌿 Santé</div><div class="card-title">Maladie coeliaque : les 15 aliments pièges à éviter absolument</div></div></a>
-<a href="/sante/gluten-et-sante-mentale.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="Gluten et santé mentale : anxiété, dépression et brouillard mental" loading="lazy"/></div><div class="card-body"><div class="card-cat">🌿 Santé</div><div class="card-title">Gluten et santé mentale : anxiété, dépression et brouillard mental</div></div></a>
-  </div>
-</div>
-<div class="home-wrap">
-  <div class="section-head">
-    <h2 class="section-title">🌿 Santé</h2>
-    <a class="section-link" href="/sante/">Tout voir &rarr;</a>
-  </div>
-  <div class="articles-grid">
-<a href="/sante/test-intolerance-gluten-maison.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80" alt="Comment tester son intolérance au gluten soi-même à la maison" loading="lazy"/></div><div class="card-body"><div class="card-cat">🌿 Santé</div><div class="card-title">Comment tester son intolérance au gluten soi-même à la maison</div></div></a>
-<a href="/sante/sans-gluten-prise-de-poids-science.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80" alt="Sans gluten et prise de poids : ce que dit vraiment la science" loading="lazy"/></div><div class="card-body"><div class="card-cat">🌿 Santé</div><div class="card-title">Sans gluten et prise de poids : ce que dit vraiment la science</div></div></a>
-<a href="/sante/sans-gluten-grossesse.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1544126592-807ade215a0b?w=800&q=80" alt="Grossesse et régime sans gluten : ce qu'il faut savoir" loading="lazy"/></div><div class="card-body"><div class="card-cat">🌿 Santé</div><div class="card-title">Grossesse et régime sans gluten : ce qu'il faut savoir</div></div></a>
-<a href="/sante/regime-sans-gluten-sportif.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80" alt="Régime sans gluten et sport : comment maintenir ses performances" loading="lazy"/></div><div class="card-body"><div class="card-cat">🌿 Santé</div><div class="card-title">Régime sans gluten et sport : comment maintenir ses performances</div></div></a>
-  </div>
-</div>
-<div class="home-wrap">
-  <div class="section-head">
-    <h2 class="section-title">⚖️ Farines</h2>
-    <a class="section-link" href="/farines/">Tout voir &rarr;</a>
-  </div>
-  <div class="articles-grid">
-<a href="/farines/top-8-farines-sans-gluten-2025.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1585478259715-4c6d5047b7c1?w=800&q=80" alt="Top 8 des farines sans gluten en 2025 : notre classement complet" loading="lazy"/></div><div class="card-body"><div class="card-cat">⚖️ Farines</div><div class="card-title">Top 8 des farines sans gluten en 2025 : notre classement complet</div></div></a>
-<a href="/farines/psyllium-ingredient-cle-sans-gluten.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=1200&q=80" alt="Psyllium : l'ingrédient indispensable de la boulangerie sans gluten" loading="lazy"/></div><div class="card-body"><div class="card-cat">⚖️ Farines</div><div class="card-title">Psyllium : l'ingrédient indispensable de la boulangerie sans gluten</div></div></a>
-<a href="/farines/mix-farines-maison-tout-usage.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1585478259715-4c6d5047b7c1?w=800&q=80" alt="Créer son mix de farines sans gluten maison tout usage" loading="lazy"/></div><div class="card-body"><div class="card-cat">⚖️ Farines</div><div class="card-title">Créer son mix de farines sans gluten maison tout usage</div></div></a>
-<a href="/farines/feculents-sans-gluten-differences.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1200&q=80" alt="Maïzena, fécule de tapioca, arrow-root : quelles différences ?" loading="lazy"/></div><div class="card-body"><div class="card-cat">⚖️ Farines</div><div class="card-title">Maïzena, fécule de tapioca, arrow-root : quelles différences ?</div></div></a>
-  </div>
-</div>
-<div class="home-wrap">
-  <div class="section-head">
-    <h2 class="section-title">📖 Conseils</h2>
-    <a class="section-link" href="/guides/">Tout voir &rarr;</a>
-  </div>
-  <div class="articles-grid">
-<a href="/guides/voyage-sans-gluten-europe.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Voyage sans gluten en Europe : les 10 pays les plus accueillants" loading="lazy"/></div><div class="card-body"><div class="card-cat">📖 Conseils</div><div class="card-title">Voyage sans gluten en Europe : les 10 pays les plus accueillants</div></div></a>
-<a href="/guides/sans-gluten-restaurant.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Sans gluten au restaurant : comment commander sans se tromper" loading="lazy"/></div><div class="card-body"><div class="card-cat">📖 Conseils</div><div class="card-title">Sans gluten au restaurant : comment commander sans se tromper</div></div></a>
-<a href="/guides/sans-gluten-noel-fetes.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1482575832494-771f74bf6857?w=800&q=80" alt="Noël sans gluten : comment gérer les fêtes en famille" loading="lazy"/></div><div class="card-body"><div class="card-cat">📖 Conseils</div><div class="card-title">Noël sans gluten : comment gérer les fêtes en famille</div></div></a>
-<a href="/guides/sans-gluten-ecole-enfants.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80" alt="Mon enfant intolérant au gluten à l'école : guide pratique" loading="lazy"/></div><div class="card-body"><div class="card-cat">📖 Conseils</div><div class="card-title">Mon enfant intolérant au gluten à l'école : guide pratique</div></div></a>
-  </div>
-</div>
-<!-- SECTIONS_AUTO_FIN -->
-
-<div class="home-wrap">
-  <div class="section-head">
-    <h2 class="section-title">💬 Ce que dit notre communauté</h2>
-  </div>
-  <div class="avis-overflow">
-    <div class="avis-track" id="avisTrack">
-      <div class="testimonial-card"><div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testimonial-text">Depuis que j'ai découvert ce site, je ne me sens plus seule dans mon intolérance. Les recettes sont simples et vraiment délicieuses !</p><p class="testimonial-name"><span class="avis-name-tag">Sophie M.</span><span class="avis-ville">Lyon</span></p></div>
-      <div class="testimonial-card"><div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testimonial-text">J'ai enfin réussi à faire un pain sans gluten qui ressemble à un vrai pain. La recette de la baguette est incroyable !</p><p class="testimonial-name"><span class="avis-name-tag">Marie-Claire D.</span><span class="avis-ville">Paris</span></p></div>
-      <div class="testimonial-card"><div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testimonial-text">Le guide des farines m'a sauvé la mise. Je ne savais pas comment remplacer la farine de blé, maintenant je cuisine comme avant !</p><p class="testimonial-name"><span class="avis-name-tag">Isabelle T.</span><span class="avis-ville">Bordeaux</span></p></div>
-      <div class="testimonial-card"><div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testimonial-text">Ma fille cœliaque peut enfin manger comme les autres enfants. Les recettes de gâteaux sont bluffantes !</p><p class="testimonial-name"><span class="avis-name-tag">Nathalie R.</span><span class="avis-ville">Toulouse</span></p></div>
-      <div class="testimonial-card"><div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testimonial-text">Les articles sur la santé sont très bien documentés. J'ai enfin compris pourquoi je me sentais si fatiguée depuis des années.</p><p class="testimonial-name"><span class="avis-name-tag">Céline B.</span><span class="avis-ville">Nantes</span></p></div>
-      <div class="testimonial-card"><div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testimonial-text">Le brownie aux haricots noirs, j'étais sceptique, mais maintenant c'est la recette que je fais le plus souvent !</p><p class="testimonial-name"><span class="avis-name-tag">Aurélie F.</span><span class="avis-ville">Strasbourg</span></p></div>
-      <div class="testimonial-card"><div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testimonial-text">Enfin un site sérieux sur le sans gluten ! Les informations sont claires, les recettes testées. Je recommande !</p><p class="testimonial-name"><span class="avis-name-tag">Patricia L.</span><span class="avis-ville">Marseille</span></p></div>
-      <div class="testimonial-card"><div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testimonial-text">J'ai suivi les conseils pour les restaurants et je n'ai plus peur de sortir manger. Les astuces sont vraiment efficaces !</p><p class="testimonial-name"><span class="avis-name-tag">Julie M.</span><span class="avis-ville">Lille</span></p></div>
-      <div class="testimonial-card"><div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testimonial-text">Les galettes de sarrasin sont maintenant un classique chez nous le dimanche. Recette parfaite, résultat professionnel !</p><p class="testimonial-name"><span class="avis-name-tag">Émilie C.</span><span class="avis-ville">Rennes</span></p></div>
-      <div class="testimonial-card"><div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><p class="testimonial-text">Grâce à ce site j'ai perdu 5 kilos en 3 mois en changeant ma façon de cuisiner sans gluten. Les conseils sont précieux !</p><p class="testimonial-name"><span class="avis-name-tag">Valérie H.</span><span class="avis-ville">Nice</span></p></div>
-    </div>
-  </div>
-</div>
-<style>
-.avis-overflow{overflow:hidden}
-.avis-track{display:flex;gap:3rem;width:max-content;animation:scrollAvis 90s linear infinite;align-items:stretch}
-.avis-track:hover{animation-play-state:paused}
-.avis-track .testimonial-card{width:260px;white-space:normal;flex-shrink:0}
-.avis-track .testimonial-name{display:flex;align-items:center;gap:.5rem;justify-content:center;margin-top:.75rem}
-.avis-name-tag{background:#5c3d2e;color:#fff;font-size:.75rem;font-weight:700;padding:.2rem .6rem;border-radius:4px;font-family:var(--sans)}
-.avis-ville{font-size:.78rem;color:var(--gray);font-family:var(--sans)}
-@keyframes scrollAvis{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-</style>
-<script>(function(){var t=document.getElementById('avisTrack');if(t)t.innerHTML+=t.innerHTML;})();</script>
-
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-links">
-      <a href="https://www.whynottraining.fr/08c32d2c-1fbf916c-b0fd38be-d95c800f-ee160319-0993e605" target="_blank">🎁 Guide gratuit</a>
-      <a href="https://www.whynottraining.fr/ed790464" target="_blank">📚 La Bible des Farines</a>
-      <a href="/a-propos.html">À propos</a>
-      <a href="/glossaire.html">Glossaire</a>
-      <a href="/mentions-legales.html">Mentions légales</a>
-      <a href="/cgv.html">CGV</a>
-    </div>
-    <p class="footer-legal">© 2026 Le Club Sans Gluten · Tous droits réservés</p>
-  </div>
-</footer>
-
-<div class="sticky-cta" id="stickyCta">
-  <a href="https://www.whynottraining.fr/08c32d2c-1fbf916c-b0fd38be-d95c800f-ee160319-0993e605" target="_blank" class="sticky-cta-btn">🎁 Guide gratuit — Je le veux !</a>
-  <button class="sticky-cta-close" onclick="document.getElementById('stickyCta').style.display='none'">✕</button>
-</div>
-<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <script>
-window.addEventListener('scroll',function(){
-  var s=window.scrollY;
-  document.getElementById('backToTop').style.display=s>400?'flex':'none';
-  var cta=document.getElementById('stickyCta');
-  if(s>600){cta.classList.add('visible');}else{cta.classList.remove('visible');}
-});
+var currentCat="toutes";
+function filterCat(c,b){
+  currentCat=c;
+  document.querySelectorAll(".subcat").forEach(function(x){x.classList.remove("active")});
+  b.classList.add("active");
+  if(document.getElementById("catSearch"))document.getElementById("catSearch").value="";
+  applyFilters();
+}
+function detectCat(card){
+  var th=card.getAttribute("data-thematique")||"";
+  if(th)return th;
+  var href=card.getAttribute("href")||"";
+  var title=(card.querySelector(".card-title")||{}).textContent||"";
+  var text=(href+" "+title).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+  if(/rapide|express|[0-9]+ min|vite/.test(text))return"rapide";
+  if(/petit.dejeuner|breakfast|muffin|pancake|granola|gouter|biscuit/.test(text))return"pdej";
+  if(/soupe|veloute|minestrone|bouillon|salade|entree/.test(text))return"entrees";
+  if(/lasagne|quiche|pizza|gratin|curry|risotto|wok|poulet|boeuf/.test(text))return"plats";
+  if(/gateau|tarte|brownie|cookie|muffin|cake|dessert|fondant|citron|chocolat|tatin/.test(text))return"desserts";
+  if(/pain|baguette|brioche|chataigne|sarrasin|galette/.test(text))return"pain";
+  return"toutes";
+}
+function applyFilters(){
+  var q=document.getElementById("catSearch")?document.getElementById("catSearch").value.toLowerCase():"";
+  document.querySelectorAll(".articles-grid .card").forEach(function(c){
+    var t=c.querySelector(".card-title");
+    var cc=detectCat(c);
+    var matchCat=(currentCat==="toutes"||cc===currentCat);
+    var matchQ=!q||(t&&t.textContent.toLowerCase().indexOf(q)>-1);
+    c.style.display=(matchCat&&matchQ)?"":"none";
+  });
+}
 </script>
+  <div class="cat-search-bar"><input type="text" class="cat-search-input" placeholder="🔍 Rechercher dans Recettes..." id="catSearch" autocomplete="off"/></div>
+  <div class="articles-grid"><a href="/recettes/tarte-tatin-pommes-sans-gluten.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1568571780765-9276ac8b75a2?w=600&q=80" alt="Tarte tatin aux pommes sans gluten : la recette parfaite" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Tarte tatin aux pommes sans gluten : la recette parfaite</div></div></a>
+<a href="/recettes/muffins-myrtilles-sans-gluten.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=600&q=80" alt="Muffins aux myrtilles sans gluten moelleux et légers" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Muffins aux myrtilles sans gluten moelleux et légers</div></div></a>
+<a href="/recettes/soupe-minestrone-sans-gluten.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80" alt="Minestrone sans gluten complet et nourrissant" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Minestrone sans gluten complet et nourrissant</div></div></a>
+<a href="/recettes/gateau-chocolat-fondant-sans-gluten.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&q=80" alt="Gâteau au chocolat fondant sans gluten ni lactose" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Gâteau au chocolat fondant sans gluten ni lactose</div></div></a>
+<a href="/recettes/pain-baguette-sans-gluten.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1549931319-a545dcf3bc7f?w=600&q=80" alt="Baguette sans gluten croustillante : enfin la vraie recette" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Baguette sans gluten croustillante : enfin la vraie recette</div></div></a>
+<a href="/recettes/lasagnes-sans-gluten-maison.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=600&q=80" alt="Lasagnes sans gluten maison : pâtes fraîches et béchamel" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Lasagnes sans gluten maison : pâtes fraîches et béchamel</div></div></a>
+<a href="/recettes/brownie-sans-gluten-haricots-noirs.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&q=80" alt="Brownie ultra-fondant sans gluten aux haricots noirs" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Brownie ultra-fondant sans gluten aux haricots noirs</div></div></a>
+<a href="/recettes/pain-de-mie-sans-gluten-moelleux.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1598373182133-52452f7691ef?w=600&q=80" alt="Pain de mie sans gluten ultra-moelleux (méthode tangzhong)" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Pain de mie sans gluten ultra-moelleux (méthode tangzhong)</div></div></a>
+<a href="/recettes/quiche-lorraine-sans-gluten.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1559650656-5d1d361ad10e?w=600&q=80" alt="Quiche lorraine sans gluten : la recette inratable" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Quiche lorraine sans gluten : la recette inratable</div></div></a>
+<a href="/recettes/cookies-sans-gluten-fondants.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=600&q=80" alt="Cookies sans gluten fondants au chocolat (mieux que les vrais)" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Cookies sans gluten fondants au chocolat (mieux que les vrais)</div></div></a>
+<a href="/recettes/galettes-sarrasin-traditionnelles.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1565299543923-37dd37887442?w=600&q=80" alt="Galettes de sarrasin traditionnelles bretonnes sans gluten" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Galettes de sarrasin traditionnelles bretonnes sans gluten</div></div></a>
+<a href="/recettes/crepes-sans-gluten-infaillible.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1519676867240-f03562e64548?w=600&q=80" alt="Crêpes sans gluten légères et dorées (recette infaillible)" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Crêpes sans gluten légères et dorées (recette infaillible)</div></div></a>
+<a href="/recettes/tarte-citron-meringuee-sans-gluten.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=600&q=80" alt="Tarte au citron meringuée sans gluten : recette légère" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Tarte au citron meringuée sans gluten : recette légère</div></div></a>
+<a href="/recettes/pizza-sans-gluten-base-croustillante.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=80" alt="Pizza sans gluten : la base croustillante qui change tout" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Pizza sans gluten : la base croustillante qui change tout</div></div></a>
+<a href="/recettes/soupe-veloute-courge-sans-gluten.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?w=600&q=80" alt="Velouté de courge butternut sans gluten crémeux" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Velouté de courge butternut sans gluten crémeux</div></div></a>
+<a href="/recettes/pain-rustique-farine-chataigne.html" class="card"><div class="card-img-wrap"><img class="card-img" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80" alt="Pain rustique sans gluten à la farine de châtaigne" loading="lazy"/></div><div class="card-body"><div class="card-cat">🍞 Recettes</div><div class="card-title">Pain rustique sans gluten à la farine de châtaigne</div></div></a>
+</div>
+</div>
+<script>document.getElementById("catSearch").addEventListener("input",function(){var q=this.value.toLowerCase();if(typeof applyFilters!=="undefined"){applyFilters();return;}document.querySelectorAll(".card").forEach(function(c){var t=c.querySelector(".card-title");if(t)c.style.display=t.textContent.toLowerCase().indexOf(q)>-1?"":"none";});});</script>
+<footer class="site-footer"><div class="footer-inner">
+  <div class="footer-logo">Le Club <span>Sans Gluten</span></div>
+  <div class="footer-links">
+    <a href="https://www.whynottraining.fr/08c32d2c-1fbf916c-b0fd38be-d95c800f-ee160319-0993e605" target="_blank">🎁 Guide gratuit</a>
+    <a href="https://www.whynottraining.fr/ed790464" target="_blank">📚 La Bible des Farines</a>
+    <a href="/a-propos.html">À propos</a>
+    <a href="/glossaire.html">Glossaire</a>
+  </div>
+  <div class="footer-links" style="margin-top:.5rem;font-size:.8rem">
+    <a href="/mentions-legales.html">Mentions légales</a>
+    <a href="/cgv.html">CGV</a>
+  </div>
+  <p class="footer-legal">© 2026 Le Club Sans Gluten · Tous droits réservés</p>
+</div></footer>
 <div id="cookieBanner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1a1a1a;color:#fff;padding:1rem 1.5rem;z-index:9999;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-family:var(--sans);font-size:.875rem">
-  <p style="margin:0;flex:1;min-width:200px">🍪 Ce site utilise des cookies pour mesurer l'audience et améliorer votre expérience. <a href="/mentions-legales.html" style="color:var(--gold);text-decoration:underline">En savoir plus</a></p>
-  <div style="display:flex;gap:.75rem;flex-shrink:0">
-    <button onclick="acceptCookies()" style="background:var(--gold);color:#1a1a1a;border:none;padding:.5rem 1.2rem;border-radius:6px;font-weight:700;cursor:pointer;font-size:.875rem">Accepter</button>
-    <button onclick="refuseCookies()" style="background:transparent;color:#fff;border:1px solid #555;padding:.5rem 1.2rem;border-radius:6px;cursor:pointer;font-size:.875rem">Refuser</button>
+  <p style="margin:0;flex:1">🍪 Ce site utilise des cookies pour mesurer l'audience. <a href="/mentions-legales.html" style="color:var(--gold)">En savoir plus</a></p>
+  <div style="display:flex;gap:.75rem">
+    <button onclick="acceptCookies()" style="background:var(--gold);color:#1a1a1a;border:none;padding:.5rem 1.2rem;border-radius:6px;font-weight:700;cursor:pointer">Accepter</button>
+    <button onclick="refuseCookies()" style="background:transparent;color:#fff;border:1px solid #555;padding:.5rem 1.2rem;border-radius:6px;cursor:pointer">Refuser</button>
   </div>
 </div>
 <script>
-(function(){var consent=localStorage.getItem('cookie_consent');if(!consent)document.getElementById('cookieBanner').style.display='flex';})();
+(function(){if(!localStorage.getItem('cookie_consent'))document.getElementById('cookieBanner').style.display='flex';})();
 function acceptCookies(){localStorage.setItem('cookie_consent','accepted');document.getElementById('cookieBanner').style.display='none';}
 function refuseCookies(){localStorage.setItem('cookie_consent','refused');document.getElementById('cookieBanner').style.display='none';}
 </script>
-
-
-<script src="/assets/search-index.js"></script>
 <script>
-(function(){
-  var input = document.getElementById('headerSearch');
-  var results = document.getElementById('searchResults');
-  if(!input || !results) return;
-
-  function normalize(s){
-    return s.toLowerCase()
-      .normalize('NFD').replace(/[̀-ͯ]/g,'')
-      .replace(/[^a-z0-9 ]/g,' ');
+window.addEventListener('load', function() {
+  var params = new URLSearchParams(window.location.search);
+  var cat = params.get('cat');
+  if(cat) {
+    var btn = document.querySelector('.subcat[onclick*="' + cat + '"]');
+    if(btn) {
+      btn.click();
+      setTimeout(function(){ btn.scrollIntoView({behavior:'smooth', block:'center'}); }, 300);
+    }
   }
-
-  input.addEventListener('input', function(){
-    var q = normalize(this.value.trim());
-    if(q.length < 2){ results.innerHTML=''; results.style.display='none'; return; }
-    
-    var words = q.split(' ').filter(Boolean);
-    var matches = SEARCH_INDEX.filter(function(a){
-      var t = normalize(a.title);
-      return words.every(function(w){ return t.indexOf(w) > -1; });
-    }).slice(0, 6);
-
-    if(matches.length === 0){ results.innerHTML=''; results.style.display='none'; return; }
-
-    results.innerHTML = matches.map(function(a){
-      return '<a href="'+a.url+'" class="search-result-item">'+
-        '<img src="'+a.img+'" alt="" class="search-result-img" onerror="this.style.display='none'"/>'+
-        '<div class="search-result-body">'+
-          '<span class="search-result-cat">'+a.emoji+' '+a.cat+'</span>'+
-          '<span class="search-result-title">'+a.title+'</span>'+
-        '</div>'+
-      '</a>';
-    }).join('');
-    results.style.display = 'block';
-  });
-
-  input.addEventListener('keydown', function(e){
-    if(e.key === 'Enter'){
-      var q = this.value.trim();
-      if(q) window.location.href = '/recettes/?q=' + encodeURIComponent(q);
-    }
-  });
-
-  document.addEventListener('click', function(e){
-    if(!input.contains(e.target) && !results.contains(e.target)){
-      results.style.display='none';
-    }
-  });
-})();
+});
 </script>
-</body>
-</html>
+</body></html>
