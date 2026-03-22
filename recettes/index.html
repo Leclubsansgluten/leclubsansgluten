@@ -38,15 +38,17 @@ function filterCat(c,b){
   applyFilters();
 }
 function detectCat(card){
-  var href=(card.getAttribute("href")||"").toLowerCase();
-  var title=(card.querySelector(".card-title")||{textContent:""}).textContent.toLowerCase();
-  var text=href+" "+title;
-  if(/rapide|express|vite|10.min|5.min/.test(text))return"rapide";
-  if(/petit|dejeuner|breakfast|muffin|pancake|granola|gouter|biscuit/.test(text))return"pdej";
+  var th=card.getAttribute("data-thematique")||"";
+  if(th)return th;
+  var href=card.getAttribute("href")||"";
+  var title=(card.querySelector(".card-title")||{}).textContent||"";
+  var text=(href+" "+title).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+  if(/rapide|express|[0-9]+ min|vite/.test(text))return"rapide";
+  if(/petit.dejeuner|breakfast|muffin|pancake|granola|gouter|biscuit/.test(text))return"pdej";
   if(/soupe|veloute|minestrone|bouillon|salade|entree/.test(text))return"entrees";
-  if(/lasagne|quiche|pizza|gratin|curry|risotto|pates|pasta/.test(text))return"plats";
-  if(/gateau|tarte|brownie|cookie|fondant|chocolat|citron|anniversaire|dessert|cake/.test(text))return"desserts";
-  if(/pain|baguette|brioche|chataigne|sarrasin|galette|mie/.test(text))return"pain";
+  if(/lasagne|quiche|pizza|gratin|curry|risotto|wok|poulet|boeuf/.test(text))return"plats";
+  if(/gateau|tarte|brownie|cookie|muffin|cake|dessert|fondant|citron|chocolat|tatin/.test(text))return"desserts";
+  if(/pain|baguette|brioche|chataigne|sarrasin|galette/.test(text))return"pain";
   return"toutes";
 }
 function applyFilters(){
