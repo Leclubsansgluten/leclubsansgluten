@@ -1,4 +1,3 @@
-guides/menu-hebdomadaire-sans-gluten-femmes-actives
-recettes/pates-sans-gluten-maison-facile
-sante/osteoporose-carence-calcium-femmes-intolerance-gluten
-farines/farines-sans-gluten-patisserie-guide-complet
+sante/fatigue-chronique-intolerance-gluten-femme
+farines/remplacer-farine-ble-farines-sans-gluten-patisserie
+guides/repas-equilibres-sans-gluten-menopause
